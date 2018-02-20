@@ -135,4 +135,3 @@ void offer_2_test()
 	if (singleton3 == singleton4)
 		cout << "Singleton2 success" << endl;
 }
-
