@@ -114,7 +114,8 @@
     <ClCompile Include="mian.cpp" />
     <ClCompile Include="offer_1.cpp" />
     <ClCompile Include="offer_2.cpp" />
-    <ClCompile Include="offer_3.cpp" />
+    <ClCompile Include="offer_3_1.cpp" />
+    <ClCompile Include="offer_3_2.cpp" />
     <ClCompile Include="offer_4.cpp" />
     <ClCompile Include="offer_5.cpp" />
     <ClCompile Include="offer_6.cpp" />
@@ -128,7 +129,8 @@
   <ItemGroup>
     <ClInclude Include="offer_1.h" />
     <ClInclude Include="offer_2.h" />
-    <ClInclude Include="offer_3.h" />
+    <ClInclude Include="offer_3_1.h" />
+    <ClInclude Include="offer_3_2.h" />
     <ClInclude Include="offer_4.h" />
     <ClInclude Include="offer_5.h" />
     <ClInclude Include="offer_6.h" />

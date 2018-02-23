@@ -23,7 +23,7 @@ void ReplaceBlank(char str[], int length)
 	// 判断字符是否会越界
 	if (length < (newLength + 1))
 		return;
-	char replaceChar[4] = "#20";
+	char replaceChar[4] = "%20";
 	// 替换
 	while (newLength >= 0){
 		if (str[originalLength] == ' ') {
@@ -39,21 +39,112 @@ void ReplaceBlank(char str[], int length)
 	return;
 }
 
+// ====================测试代码====================
+void Test_5(char* testName, char str[], int length, char expected[])
+{
+	if (testName != nullptr)
+		printf("%s begins: ", testName);
+
+	ReplaceBlank(str, length);
+
+	if (expected == nullptr && str == nullptr)
+		printf("passed.\n");
+	else if (expected == nullptr && str != nullptr)
+		printf("failed.\n");
+	else if (strcmp(str, expected) == 0)
+		printf("passed.\n");
+	else
+		printf("failed.\n");
+}
+
+// 空格在句子中间
+void Test_5_1()
+{
+	const int length = 100;
+
+	char str[length] = "hello world";
+	Test_5("Test_5_1", str, length, "hello%20world");
+}
+
+// 空格在句子开头
+void Test_5_2()
+{
+	const int length = 100;
+
+	char str[length] = " helloworld";
+	Test_5("Test_5_2", str, length, "%20helloworld");
+}
+
+// 空格在句子末尾
+void Test_5_3()
+{
+	const int length = 100;
+
+	char str[length] = "helloworld ";
+	Test_5("Test_5_3", str, length, "helloworld%20");
+}
+
+// 连续有两个空格
+void Test_5_4()
+{
+	const int length = 100;
+
+	char str[length] = "hello  world";
+	Test_5("Test_5_4", str, length, "hello%20%20world");
+}
+
+// 传入nullptr
+void Test_5_5()
+{
+	Test_5("Test_5_5", nullptr, 0, nullptr);
+}
+
+// 传入内容为空的字符串
+void Test_5_6()
+{
+	const int length = 100;
+
+	char str[length] = "";
+	Test_5("Test_5_6", str, length, "");
+}
+
+//传入内容为一个空格的字符串
+void Test_5_7()
+{
+	const int length = 100;
+
+	char str[length] = " ";
+	Test_5("Test_5_7", str, length, "%20");
+}
+
+// 传入的字符串没有空格
+void Test_5_8()
+{
+	const int length = 100;
+
+	char str[length] = "helloworld";
+	Test_5("Test_5_8", str, length, "helloworld");
+}
+
+// 传入的字符串全是空格
+void Test_5_9()
+{
+	const int length = 100;
+
+	char str[length] = "   ";
+	Test_5("Test_5_9", str, length, "%20%20%20");
+}
+
 void offer_5_test()
 {
-	// 正常空格
-	char testChar[20] = "we are happy.";
-	int length = 18;
-	ReplaceBlank(nullptr, length);
-	ReplaceBlank(testChar, 0);
-	ReplaceBlank(testChar, 16);
-	ReplaceBlank(testChar, length);
-
-	// 连续空格 前后有空格
-	char testChar1[20] = " we  are happy. ";
-	ReplaceBlank(testChar1, 27);
-	// 没有空格
-	char testChar2[20] = "wearehappy.";
-	ReplaceBlank(testChar2, length);
+	Test_5_1();
+	Test_5_2();
+	Test_5_3();
+	Test_5_4();
+	Test_5_5();
+	Test_5_6();
+	Test_5_7();
+	Test_5_8();
+	Test_5_9();
 	cout << "offer_5 success" << endl;
 }

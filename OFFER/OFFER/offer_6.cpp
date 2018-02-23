@@ -1,82 +1,16 @@
 #include "offer_6.h"
+#include "Utilities\List.h"
 
 /*
 	输入一个链表，从尾到头打印链表每个节点的值。
 */
 
-struct ListNode
-{
-	int m_nValue;
-	ListNode* m_pNext;
-};
-
-// 在末尾添加
-void AddToTail(ListNode** pHead, int value) 
-{
-	// pHead是指向头指针的指针 *pHead是头指针
-	if (pHead == nullptr)
-		return;
-	
-	ListNode *pNew = new ListNode();
-	pNew->m_nValue = value;
-	pNew->m_pNext = nullptr;
-	// 如果在指针头
-	if (*pHead == nullptr) {
-		*pHead = pNew;
-	}
-	else
-	{
-		ListNode *pNode = *pHead;
-		while (pNode->m_pNext != nullptr){
-			pNode = pNode->m_pNext;
-		}
-		pNode->m_pNext = pNew;
-	}
-}
-
-void RemoveNode(ListNode** pHead, int value) 
-{
-	if (pHead == nullptr)
-		return;
-	// 如果头指针为空 则没有删除的内存
-	if (*pHead == nullptr) 
-		return;
-
-	ListNode *pNode = *pHead;				// 中转指针
-	ListNode *pToBeDeleted = nullptr;		// 要删除的指针
-	// 若果删除的是指针头 则头指针指向下一位
-	if (pNode->m_nValue == value) {
-		pToBeDeleted = *pHead;
-		*pHead = pNode->m_pNext;
-	}
-	else {
-		ListNode *pPrevious = *pHead;
-		while (pNode->m_nValue != value && pNode->m_pNext != nullptr){
-			pPrevious = pNode;			// 始终指向上一个指针
-			pNode = pNode->m_pNext;
-		}
-		// 由于有可能存在没有value的情况 此处删除指针要进行判断
-		if (pNode->m_nValue == value) {
-			pToBeDeleted = pNode;
-			pPrevious = pNode->m_pNext;
-		}
-	}
-
-	if (pToBeDeleted != nullptr) {
-		delete pToBeDeleted;
-		pToBeDeleted == nullptr;
-	}
-}
-
-/*
-	输入一个链表，从尾到头打印链表每个节点的值。
-*/
-void PrintListReversingly_Iteratively(ListNode** pHead)
+void PrintListReversingly_Iteratively(ListNode* pHead)
 {
 	if (pHead == nullptr)
 		return;
 	stack<ListNode*>nodes;
-	ListNode* pNode = *pHead;
+	ListNode* pNode = pHead;
 	while (pNode != nullptr){
 		nodes.push(pNode);
 		pNode = pNode->m_pNext;
@@ -89,22 +23,85 @@ void PrintListReversingly_Iteratively(ListNode** pHead)
 	cout << endl;
 }
 
+void PrintListReversingly_Recursively(ListNode* pHead)
+{
+	if (pHead != nullptr) {
+		if (pHead->m_pNext != nullptr) {
+			PrintListReversingly_Recursively(pHead->m_pNext);
+		}
+		cout << pHead->m_nValue << "\t";
+	}
+}
+
+// ====================测试代码====================
+void Test_6(ListNode* pHead)
+{
+	PrintList(pHead);
+	PrintListReversingly_Iteratively(pHead);
+	printf("\n");
+	PrintListReversingly_Recursively(pHead);
+}
+
+// 1->2->3->4->5
+void Test_6_1()
+{
+	printf("\nTest_6_1 begins.\n");
+
+	ListNode* pNode1 = CreateListNode(1);
+	ListNode* pNode2 = CreateListNode(2);
+	ListNode* pNode3 = CreateListNode(3);
+	ListNode* pNode4 = CreateListNode(4);
+	ListNode* pNode5 = CreateListNode(5);
+
+	ConnectListNodes(pNode1, pNode2);
+	ConnectListNodes(pNode2, pNode3);
+	ConnectListNodes(pNode3, pNode4);
+	ConnectListNodes(pNode4, pNode5);
+
+	Test_6(pNode1);
+
+	DestroyList(pNode1);
+}
+
+// 只有一个结点的链表: 1
+void Test_6_2()
+{
+	printf("\nTest_6_2 begins.\n");
+
+	ListNode* pNode1 = CreateListNode(1);
+
+	Test_6(pNode1);
+
+	DestroyList(pNode1);
+}
+
+// 空链表
+void Test_6_3()
+{
+	printf("\nTest_6_3 begins.\n");
+
+	Test_6(nullptr);
+}
+
+
 void offer_6_test()
 {
-	ListNode* pHead = new ListNode();
-	pHead->m_nValue = 0;
-	ListNode* pNdoe = pHead;
-	for (int i = 0;i < 10;++i) {
-		pNdoe->m_pNext = new ListNode();
-		pNdoe->m_pNext->m_nValue = i;
-		pNdoe->m_pNext->m_pNext = nullptr;
-		pNdoe = pNdoe->m_pNext;
-	}
-	PrintListReversingly_Iteratively(nullptr);
-	PrintListReversingly_Iteratively(&pNdoe);
-	PrintListReversingly_Iteratively(&pHead);
-
-	cout << "offer_6_test success" << endl;
+	Test_6_1();
+	Test_6_2();
+	Test_6_3();
+	cout << "offer_1 success" << endl;
+	//ListNode* pHead = new ListNode();
+	//pHead->m_nValue = 0;
+	//ListNode* pNdoe = pHead;
+	//for (int i = 0;i < 10;++i) {
+	//	pNdoe->m_pNext = new ListNode();
+	//	pNdoe->m_pNext->m_nValue = i;
+	//	pNdoe->m_pNext->m_pNext = nullptr;
+	//	pNdoe = pNdoe->m_pNext;
+	//}
+	//PrintListReversingly_Iteratively(nullptr);
+	//PrintListReversingly_Iteratively(pNdoe);
+	//PrintListReversingly_Iteratively(pHead);
 
 }
 

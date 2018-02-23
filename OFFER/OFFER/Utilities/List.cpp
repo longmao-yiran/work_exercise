@@ -1,21 +1,9 @@
-/*******************************************************************
-Copyright(c) 2016, Harry He
-All rights reserved.
-
-Distributed under the BSD license.
-(See accompanying file LICENSE.txt at
-https://github.com/zhedahht/CodingInterviewChinese2/blob/master/LICENSE.txt)
-*******************************************************************/
-
-//==================================================================
-// 《剑指Offer——名企面试官精讲典型编程题》代码
-// 作者：何海涛
-//==================================================================
-
+// list 相关操作
 #include "list.h"
 #include <stdio.h>
 #include <stdlib.h>
 
+// 创建一个节点
 ListNode* CreateListNode(int value)
 {
     ListNode* pNode = new ListNode();
@@ -25,6 +13,7 @@ ListNode* CreateListNode(int value)
     return pNode;
 }
 
+// 链接两个节点
 void ConnectListNodes(ListNode* pCurrent, ListNode* pNext)
 {
     if(pCurrent == nullptr)
@@ -36,6 +25,7 @@ void ConnectListNodes(ListNode* pCurrent, ListNode* pNext)
     pCurrent->m_pNext = pNext;
 }
 
+// 输出节点的值
 void PrintListNode(ListNode* pNode)
 { 
     if(pNode == nullptr)
@@ -48,6 +38,7 @@ void PrintListNode(ListNode* pNode)
     }
 }
 
+// 输出整个链表的值
 void PrintList(ListNode* pHead)
 {
     printf("PrintList starts.\n");
@@ -62,6 +53,7 @@ void PrintList(ListNode* pHead)
     printf("\nPrintList ends.\n");
 }
 
+// 销毁链表
 void DestroyList(ListNode* pHead)
 {
     ListNode* pNode = pHead;
@@ -73,53 +65,60 @@ void DestroyList(ListNode* pHead)
     }
 }
 
+// 在末尾添加
 void AddToTail(ListNode** pHead, int value)
 {
-    ListNode* pNew = new ListNode();
-    pNew->m_nValue = value;
-    pNew->m_pNext = nullptr;
+	// pHead是指向头指针的指针 *pHead是头指针
+	if (pHead == nullptr)
+		return;
 
-    if(*pHead == nullptr)
-    {
-        *pHead = pNew;
-    }
-    else
-    {
-        ListNode* pNode = *pHead;
-        while(pNode->m_pNext != nullptr)
-            pNode = pNode->m_pNext;
-
-        pNode->m_pNext = pNew;
-    }
+	ListNode *pNew = new ListNode();
+	pNew->m_nValue = value;
+	pNew->m_pNext = nullptr;
+	// 如果在指针头
+	if (*pHead == nullptr) {
+		*pHead = pNew;
+	}
+	else
+	{
+		ListNode *pNode = *pHead;
+		while (pNode->m_pNext != nullptr) {
+			pNode = pNode->m_pNext;
+		}
+		pNode->m_pNext = pNew;
+	}
 }
 
 void RemoveNode(ListNode** pHead, int value)
 {
-    if(pHead == nullptr || *pHead == nullptr)
-        return;
+	if (pHead == nullptr)
+		return;
+	// 如果头指针为空 则没有删除的内存
+	if (*pHead == nullptr)
+		return;
 
-    ListNode* pToBeDeleted = nullptr;
-    if((*pHead)->m_nValue == value)
-    {
-        pToBeDeleted = *pHead;
-        *pHead = (*pHead)->m_pNext;
-    }
-    else
-    {
-        ListNode* pNode = *pHead;
-        while(pNode->m_pNext != nullptr && pNode->m_pNext->m_nValue != value)
-            pNode = pNode->m_pNext;
+	ListNode *pNode = *pHead;				// 中转指针
+	ListNode *pToBeDeleted = nullptr;		// 要删除的指针
+	// 若果删除的是指针头 则头指针指向下一位
+	if (pNode->m_nValue == value) {
+		pToBeDeleted = *pHead;
+		*pHead = pNode->m_pNext;
+	}
+	else {
+		ListNode *pPrevious = *pHead;
+		while (pNode->m_nValue != value && pNode->m_pNext != nullptr) {
+			pPrevious = pNode;			// 始终指向上一个指针
+			pNode = pNode->m_pNext;
+		}
+		// 由于有可能存在没有value的情况 此处删除指针要进行判断  此处容易忽略
+		if (pNode->m_nValue == value) {
+			pToBeDeleted = pNode;
+			pPrevious = pNode->m_pNext;
+		}
+	}
 
-        if(pNode->m_pNext != nullptr && pNode->m_pNext->m_nValue == value)
-        {
-            pToBeDeleted = pNode->m_pNext;
-            pNode->m_pNext = pNode->m_pNext->m_pNext;
-        }
-    }
-
-    if(pToBeDeleted != nullptr)
-    {
-        delete pToBeDeleted;
-        pToBeDeleted = nullptr;
-    }
+	if (pToBeDeleted != nullptr) {
+		delete pToBeDeleted;
+		pToBeDeleted == nullptr;
+	}
 }

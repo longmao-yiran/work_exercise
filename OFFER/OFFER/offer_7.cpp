@@ -56,7 +56,7 @@ void PreorderTraverse(BinaryTreeNode* tree)
 	}
 }
 
-// 牛客网
+// 牛客网 ac
 struct TreeNode {
 	int val;
 	TreeNode *left;
@@ -245,10 +245,12 @@ void offer_7_test()
 	Test5();
 	Test6();
 	Test7();
+	cout << "offer_7 success" << endl;
 
+	// 牛客网vector接口使用方法 未进行完整测试
 	int predoer[9] = { 1,2,4,7,3,5,6,8 };
 	int inorder[9] = { 4,7,2,1,5,3,8,6 }; 
-	// 牛客网vector接口使用方法
+	
 	vector<int> predoerVector(&predoer[0], &predoer[8]);
 	vector<int> inorderVector(&inorder[0], &inorder[8]);
 	TreeNode* root2 = reConstructBinaryTree(predoerVector, inorderVector);

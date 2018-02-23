@@ -41,17 +41,99 @@ bool Find(int target, vector<vector<int> > array) {
 	return false;
 }
 
+// ====================测试代码====================
+void Test_4(char* testName, int* matrix, int rows, int columns, int number, bool expected)
+{
+	if (testName != nullptr)
+		printf("%s begins: ", testName);
+
+	bool result = Find(matrix, rows, columns, number);
+	if (result == expected)
+		printf("Passed.\n");
+	else
+		printf("Failed.\n");
+}
+
+//  1   2   8   9
+//  2   4   9   12
+//  4   7   10  13
+//  6   8   11  15
+// 要查找的数在数组中
+void Test_4_1()
+{
+	int matrix[][4] = { { 1, 2, 8, 9 },{ 2, 4, 9, 12 },{ 4, 7, 10, 13 },{ 6, 8, 11, 15 } };
+	Test_4("Test_4_1", (int*)matrix, 4, 4, 7, true);
+}
+
+//  1   2   8   9
+//  2   4   9   12
+//  4   7   10  13
+//  6   8   11  15
+// 要查找的数不在数组中
+void Test_4_2()
+{
+	int matrix[][4] = { { 1, 2, 8, 9 },{ 2, 4, 9, 12 },{ 4, 7, 10, 13 },{ 6, 8, 11, 15 } };
+	Test_4("Test_4_2", (int*)matrix, 4, 4, 5, false);
+}
+
+//  1   2   8   9
+//  2   4   9   12
+//  4   7   10  13
+//  6   8   11  15
+// 要查找的数是数组中最小的数字
+void Test_4_3()
+{
+	int matrix[][4] = { { 1, 2, 8, 9 },{ 2, 4, 9, 12 },{ 4, 7, 10, 13 },{ 6, 8, 11, 15 } };
+	Test_4("Test_4_3", (int*)matrix, 4, 4, 1, true);
+}
+
+//  1   2   8   9
+//  2   4   9   12
+//  4   7   10  13
+//  6   8   11  15
+// 要查找的数是数组中最大的数字
+void Test_4_4()
+{
+	int matrix[][4] = { { 1, 2, 8, 9 },{ 2, 4, 9, 12 },{ 4, 7, 10, 13 },{ 6, 8, 11, 15 } };
+	Test_4("Test_4_4", (int*)matrix, 4, 4, 15, true);
+}
+
+//  1   2   8   9
+//  2   4   9   12
+//  4   7   10  13
+//  6   8   11  15
+// 要查找的数比数组中最小的数字还小
+void Test_4_5()
+{
+	int matrix[][4] = { { 1, 2, 8, 9 },{ 2, 4, 9, 12 },{ 4, 7, 10, 13 },{ 6, 8, 11, 15 } };
+	Test_4("Test_4_5", (int*)matrix, 4, 4, 0, false);
+}
+
+//  1   2   8   9
+//  2   4   9   12
+//  4   7   10  13
+//  6   8   11  15
+// 要查找的数比数组中最大的数字还大
+void Test_4_6()
+{
+	int matrix[][4] = { { 1, 2, 8, 9 },{ 2, 4, 9, 12 },{ 4, 7, 10, 13 },{ 6, 8, 11, 15 } };
+	Test_4("Test_4_6", (int*)matrix, 4, 4, 16, false);
+}
+
+// 鲁棒性测试，输入空指针
+void Test_4_7()
+{
+	Test_4("Test_4_7", nullptr, 0, 0, 16, false);
+}
+
 void offer_4_test()
 {
-	int matrix[] = { 1,2,8,9,2,4,9,12,4,7,10,13,6,8,11,15 };
-	bool result = false;
-
-	result = Find(nullptr, 4, 4, 7);
-	result = Find(nullptr, -1, 4, 7);
-	result = Find(nullptr, 4, -1, 7);
-
-	result = Find(matrix, 4, 4, 7);
-	result = Find(matrix, 4, 4, 3);
-
+	Test_4_1();
+	Test_4_2();
+	Test_4_3();
+	Test_4_4();
+	Test_4_5();
+	Test_4_6();
+	Test_4_7();
 	cout << "offer_4 success" << endl;
 }
