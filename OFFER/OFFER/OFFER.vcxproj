@@ -120,6 +120,7 @@
     <ClCompile Include="offer_5.cpp" />
     <ClCompile Include="offer_6.cpp" />
     <ClCompile Include="offer_7.cpp" />
+    <ClCompile Include="offer_8.cpp" />
     <ClCompile Include="Utilities\Array.cpp" />
     <ClCompile Include="Utilities\BinaryTree.cpp" />
     <ClCompile Include="Utilities\List.cpp" />
@@ -135,6 +136,7 @@
     <ClInclude Include="offer_5.h" />
     <ClInclude Include="offer_6.h" />
     <ClInclude Include="offer_7.h" />
+    <ClInclude Include="offer_8.h" />
     <ClInclude Include="Utilities\Array.h" />
     <ClInclude Include="Utilities\BinaryTree.h" />
     <ClInclude Include="Utilities\List.h" />

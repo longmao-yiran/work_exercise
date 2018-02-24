@@ -137,3 +137,25 @@ void offer_4_test()
 	Test_4_7();
 	cout << "offer_4 success" << endl;
 }
+
+// Å£¿ÍÍø ac
+/*
+class Solution {
+public:
+    bool Find(int target, vector<vector<int> > array) {
+	int rows = array.size();
+	int columns = array[0].size();
+	int row_tmp = 0;
+	int col_tmp = columns - 1;
+	while (row_tmp<rows && col_tmp >= 0) {
+		if (array[row_tmp][col_tmp] == target)
+			return true;
+		if (array[row_tmp][col_tmp] > target)
+			--col_tmp;
+		else
+			++row_tmp;
+	}
+	return false;
+    }
+};
+*/

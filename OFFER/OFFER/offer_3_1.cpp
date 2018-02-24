@@ -138,3 +138,49 @@ void offer_3_1_test()
 	Test_3_1_6();
 	cout << "offer_3_1 success" << endl;
 }
+
+// 牛客网 ac
+/*
+class Solution {
+public:
+	// Parameters:
+	//        numbers:     an array of integers
+	//        length:      the length of array numbers
+	//        duplication: (Output) the duplicated number in the array number
+	// Return value:       true if the input is valid, and there are some duplications in the array number
+	//                     otherwise false
+	bool duplicate(int numbers[], int length, int* duplication) {
+		// 判断是否为无效输入（空指针，数字超出范围）
+		if (numbers == nullptr || length <= 0)
+			return false;
+
+		for (int i = 0; i < length; ++i) {
+			if (numbers[i] < 0 || numbers[i] >= length)
+				return false;
+		}
+
+		// 第一重循环 扫描整个数组
+		for (int i = 0; i < length; ++i) {
+			// 第二重循环 通过位置交换，使得第i个数为i
+			while (numbers[i] != i)
+			{
+				int int_tmp = numbers[i];
+				// 如果int_tmp上的数字也是int_tmp证明该位置有两个数字 则重复 否则则进行交换 直到第i个位置为i  
+				// 注：这种交换使得每个位置的数字最多交换两次（一次到i 一次到正确位置）就能到正确的位置 
+				if (int_tmp == numbers[int_tmp]) {
+					*duplication = int_tmp;
+					return true;
+				}
+				// 进行交换
+				numbers[i] = numbers[int_tmp];
+				numbers[int_tmp] = int_tmp;
+				// 帮助查看输出代码
+				//for (int j = 0;j < length;++j)
+				//	cout << numbers[j] << "\t";
+				//cout << endl;
+			}
+		}
+		return false;
+	}
+};
+*/

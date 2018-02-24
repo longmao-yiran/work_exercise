@@ -148,3 +148,38 @@ void offer_5_test()
 	Test_5_9();
 	cout << "offer_5 success" << endl;
 }
+
+// Å£¿ÍÍø ac
+/*
+class Solution {
+public:
+	void replaceSpace(char *str, int length) {
+		if (str == nullptr || length <= 0)
+			return;
+		int originalLength = 0;
+		int numOfBlank = 0;
+		while (str[originalLength] != '\0')
+		{
+			if (str[originalLength] == ' ')
+				++numOfBlank;
+			++originalLength;
+		}
+		int newLength = originalLength + numOfBlank * 2;
+		if (length < (newLength + 1))
+			return;
+		char replaceChar[4] = "%20";
+		while (newLength >= 0) {
+			if (str[originalLength] == ' ') {
+				for (int i = 2; i >= 0; --i)
+					str[newLength--] = replaceChar[i];
+				--originalLength;
+			}
+			else {
+				str[newLength--] = str[originalLength--];
+			}
+		}
+		cout << str << endl;
+		return;
+	}
+};
+*/

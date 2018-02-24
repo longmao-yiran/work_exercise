@@ -83,7 +83,6 @@ void Test_6_3()
 	Test_6(nullptr);
 }
 
-
 void offer_6_test()
 {
 	Test_6_1();
@@ -105,3 +104,34 @@ void offer_6_test()
 
 }
 
+// Å£¿ÍÍø ac
+/*
+struct ListNode {
+	int val;
+	struct ListNode *next;
+	ListNode(int x) :
+		val(x), next(NULL) {
+		}
+};
+
+class Solution {
+public:
+	vector<int> printListFromTailToHead(ListNode* head) {
+		vector<int> result;
+		if (head == nullptr)
+			return result;
+		stack<ListNode*>nodes;
+		ListNode* pNode = head;
+		while (pNode != nullptr) {
+			nodes.push(pNode);
+			pNode = pNode->next;
+		}
+		while (!nodes.empty()) {
+			pNode = nodes.top();
+			result.push_back(pNode->val);
+			nodes.pop();
+		}
+		return result;
+	}
+};
+*/
