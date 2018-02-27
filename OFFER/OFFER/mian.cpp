@@ -8,6 +8,9 @@
 #include "offer_6.h"
 #include "offer_7.h"
 #include "offer_8.h"
+#include "offer_9.h"
+#include "offer_10.h"
+#include "offer_11.h"
 using namespace std;
 
 int main()
@@ -20,7 +23,10 @@ int main()
 	//offer_5_test();
 	//offer_6_test();
 	//offer_7_test();
-	offer_8_test();
+	//offer_8_test();
+	//offer_9_test();
+	//offer_10_test();
+	//offer_11_test();
 	getchar();
 	return 0;
 }

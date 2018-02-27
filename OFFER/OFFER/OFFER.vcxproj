@@ -113,6 +113,8 @@
   <ItemGroup>
     <ClCompile Include="mian.cpp" />
     <ClCompile Include="offer_1.cpp" />
+    <ClCompile Include="offer_10.cpp" />
+    <ClCompile Include="offer_11.cpp" />
     <ClCompile Include="offer_2.cpp" />
     <ClCompile Include="offer_3_1.cpp" />
     <ClCompile Include="offer_3_2.cpp" />
@@ -121,6 +123,7 @@
     <ClCompile Include="offer_6.cpp" />
     <ClCompile Include="offer_7.cpp" />
     <ClCompile Include="offer_8.cpp" />
+    <ClCompile Include="offer_9.cpp" />
     <ClCompile Include="Utilities\Array.cpp" />
     <ClCompile Include="Utilities\BinaryTree.cpp" />
     <ClCompile Include="Utilities\List.cpp" />
@@ -129,6 +132,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="offer_1.h" />
+    <ClInclude Include="offer_10.h" />
+    <ClInclude Include="offer_11.h" />
     <ClInclude Include="offer_2.h" />
     <ClInclude Include="offer_3_1.h" />
     <ClInclude Include="offer_3_2.h" />
@@ -137,6 +142,7 @@
     <ClInclude Include="offer_6.h" />
     <ClInclude Include="offer_7.h" />
     <ClInclude Include="offer_8.h" />
+    <ClInclude Include="offer_9.h" />
     <ClInclude Include="Utilities\Array.h" />
     <ClInclude Include="Utilities\BinaryTree.h" />
     <ClInclude Include="Utilities\List.h" />
