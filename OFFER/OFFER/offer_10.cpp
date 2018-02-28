@@ -124,3 +124,72 @@ public:
 	}
 };
 */
+
+// 牛客网 ac
+/*
+	一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。
+*/
+/*
+class Solution {
+public:
+    int jumpFloor(int number) {
+        if (number <= 0)
+			return 0;
+		if (number == 1)
+			return 1;
+		long long result1 = 1;
+		long long result2 = 1;
+		for (int i = 2; i <= number; i++) {
+			int tempInt = result2;
+			result2 = result1 + result2;
+			result1 = tempInt;
+		}
+		return result2;
+    }
+};
+*/
+
+// 牛客网 ac
+/*
+	一只青蛙一次可以跳上1级台阶，也可以跳上2级……它也可以跳上n级。求该青蛙跳上一个n级的台阶总共有多少种跳法。
+*/
+/*
+class Solution {
+public:
+    int jumpFloorII(int number) {
+        if (number <= 0)
+			return 0;
+		if (number == 1)
+			return 1;
+		long long result = 2;
+		for (int i = 2; i < number; i++) {
+			result = result * 2;
+		}
+		return result;
+    }
+};
+*/
+
+// 牛客网 ac
+/*
+	我们可以用2*1的小矩形横着或者竖着去覆盖更大的矩形。请问用n个2*1的小矩形无重叠地覆盖一个2*n的大矩形，总共有多少种方法？
+*/
+/*
+class Solution {
+public:
+    int rectCover(int number) {
+        if (number <= 0)
+			return 0;
+		if (number == 1)
+			return 1;
+		long long result1 = 1;
+		long long result2 = 1;
+		for (int i = 2; i <= number; i++) {
+			int tempInt = result2;
+			result2 = result1 + result2;
+			result1 = tempInt;
+		}
+		return result2;
+    }
+};
+*/

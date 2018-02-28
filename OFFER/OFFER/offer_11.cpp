@@ -1,16 +1,6 @@
 #include "offer_11.h"
 
-int MinOrder(int number[], int index1, int index2)
-{
-	int result = number[index1];
-	for (int i = index1; i <= index2; ++i) {
-		if (result > number[i]) {
-			result = number[i];
-			break;
-		}
-	}
-	return result;
-}
+int MinOrder(int number[], int index1, int index2);
 
 int Min(int number[], int length)
 {
@@ -31,16 +21,29 @@ int Min(int number[], int length)
 		if (number[index1] == number[indexMid] && number[indexMid] == number[index2])
 			return MinOrder(number,index1,index2);
 
-		if (number[index1] < number[indexMid]) {
+		// 注意此处 为了防止 31345 这种情况 比较要加等于 
+		// 由于while已经判断index1>=index2 若想下面两个if同时都成立，则需要index1>=indexMid<=index2 则index1==indexMid==index2 的特殊情况
+		if (number[index1] <= number[indexMid]) {
 			index1 = indexMid;
 		}
-		if (number[index1] > number[indexMid]) {
+		else if (number[index2] >= number[indexMid]) {
 			index2 = indexMid;
 		}
 	}
 	return number[indexMid];
 }
 
+int MinOrder(int number[], int index1, int index2)
+{
+	int result = number[index1];
+	for (int i = index1; i <= index2; ++i) {
+		if (result > number[i]) {
+			result = number[i];
+			break;
+		}
+	}
+	return result;
+}
 
 // ====================测试代码====================
 void Test_11(int* numbers, int length, int expected)
@@ -125,4 +128,54 @@ void offer_11_test()
 	Test_11_5();
 	Test_11_6();
 	Test_11_7();
+
+	cout << "offer_11 success" << endl;
 }
+
+// 牛客网 ac
+/*
+class Solution {
+public:
+	int MinOrder(vector<int> number, int index1, int index2)
+	{
+		int result = number[index1];
+		for (int i = index1; i <= index2; ++i) {
+			if (result > number[i]) {
+				result = number[i];
+				break;
+			}
+		}
+		return result;
+	}
+
+
+	int minNumberInRotateArray(vector<int> rotateArray) {
+		int length = rotateArray.size();
+		if (length <= 0)
+			return 0;
+
+		int index1 = 0;
+		int index2 = length - 1;
+		int indexMid = index1;
+		while (rotateArray[index1] >= rotateArray[index2])
+		{
+			if (index2 - index1 == 1) {
+				indexMid = index2;
+				break;
+			}
+			indexMid = (index1 + index2) / 2;
+			// 应对特殊情况
+			if (rotateArray[index1] == rotateArray[indexMid] && rotateArray[indexMid] == rotateArray[index2])
+				return MinOrder(rotateArray, index1, index2);
+
+			if (rotateArray[index1] <= rotateArray[indexMid]) {
+				index1 = indexMid;
+			}
+			if (rotateArray[index2] >= rotateArray[indexMid]) {
+				index2 = indexMid;
+			}
+		}
+		return rotateArray[indexMid];
+	}
+};
+*/

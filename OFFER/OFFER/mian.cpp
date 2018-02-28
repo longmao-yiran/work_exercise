@@ -1,4 +1,4 @@
-#include <iostream>
+#include "uk_test.h"
 #include "offer_1.h"
 #include "offer_2.h"
 #include "offer_3_1.h"
@@ -11,10 +11,14 @@
 #include "offer_9.h"
 #include "offer_10.h"
 #include "offer_11.h"
+#include "offer_12.h"
+#include "offer_13.h"
+
 using namespace std;
 
 int main()
 {
+	//offer_uk_test();
 	//offer_1_test();
 	//offer_2_test();
 	//offer_3_1_test();
@@ -27,6 +31,8 @@ int main()
 	//offer_9_test();
 	//offer_10_test();
 	//offer_11_test();
+	//offer_12_test();
+	offer_13_test();
 	getchar();
 	return 0;
 }
