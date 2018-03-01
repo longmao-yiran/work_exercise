@@ -1,7 +1,11 @@
 #include "offer_2.h"
 
 std::mutex mtx;
-// 实现一个单例模式   
+
+/*
+	实现一个单例模式   
+*/
+ 
 // 懒汉模式
 class Singleton1 final
 {

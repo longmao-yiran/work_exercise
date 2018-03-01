@@ -13,6 +13,9 @@
 #include "offer_11.h"
 #include "offer_12.h"
 #include "offer_13.h"
+#include "offer_14.h"
+#include "offer_15.h"
+#include "offer_16.h"
 
 using namespace std;
 
@@ -32,7 +35,10 @@ int main()
 	//offer_10_test();
 	//offer_11_test();
 	//offer_12_test();
-	offer_13_test();
+	//offer_13_test();
+	//offer_14_test();
+	//offer_15_test();
+	offer_16_test();
 	getchar();
 	return 0;
 }

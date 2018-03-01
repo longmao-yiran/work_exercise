@@ -1,5 +1,8 @@
 #include "offer_1.h"
 
+/*
+	赋值运算符
+*/
 
 // 添加赋值运算符
 class CMyString
