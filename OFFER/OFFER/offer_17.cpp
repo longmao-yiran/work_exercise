@@ -76,7 +76,33 @@ void PrintNumber(char* number)
 	cout << "\t";
 }
 
+// 递归方法
+void Print1ToMaxOfNDigits_2(int n)
+{
+	if (n <= 0)
+		return;
+	char* number = new char[n + 1];
+	number[n] = '\0';						// 注意设置结束符 不然会报错
+	memset(number, 0, n);
+	for (int i = 0;i < 10;++i) {
+		number[0] = '0' + i;
+		Print1ToMaxOfNDigitsRecursively(number, n, 0);
+	}
 
+	delete[] number;
+}
+
+void Print1ToMaxOfNDigitsRecursively(char* number, int length, int index)
+{
+	if (index == length - 1) {
+		PrintNumber(number);
+		return;
+	}
+	for (int i = 0;i < 10;++i) {
+		number[index +1] = '0' + i;
+		Print1ToMaxOfNDigitsRecursively(number, length, index + 1);
+	}
+}
 
 // ====================测试代码====================
 void Test_17(int n)
@@ -84,7 +110,7 @@ void Test_17(int n)
 	printf("Test for %d begins:\n", n);
 
 	Print1ToMaxOfNDigits_1(n);
-	//Print1ToMaxOfNDigits_2(n);
+	Print1ToMaxOfNDigits_2(n);
 
 	printf("\nTest for %d ends.\n", n);
 }
