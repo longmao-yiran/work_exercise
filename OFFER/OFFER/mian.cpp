@@ -16,6 +16,7 @@
 #include "offer_14.h"
 #include "offer_15.h"
 #include "offer_16.h"
+#include "offer_17.h"
 
 using namespace std;
 
@@ -38,7 +39,8 @@ int main()
 	//offer_13_test();
 	//offer_14_test();
 	//offer_15_test();
-	offer_16_test();
+	//offer_16_test();
+	offer_17_test();
 	getchar();
 	return 0;
 }
