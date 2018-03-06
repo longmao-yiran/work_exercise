@@ -19,6 +19,8 @@
 #include "offer_17.h"
 #include "offer_18_1.h"
 #include "offer_18_2.h"
+#include "offer_19.h"
+#include "offer_20.h"
 
 using namespace std;
 
@@ -44,7 +46,9 @@ int main()
 	//offer_16_test();
 	//offer_17_test();
 	//offer_18_1_test();
-	offer_18_2_test();
+	//offer_18_2_test();
+	//offer_19_test();
+	offer_20_test();
 	getchar();
 	return 0;
 }
