@@ -19,6 +19,8 @@ int NumberOf1_Solution1(int n)
 	return count;
 }
 
+// 把整数减去1后在和原来的整数做位与运算，得到的结果相当于把整数的二进制最右边的1变成0
+// (n-1)&n ==> 去掉最右边的1
 int NumberOf1_Solution2(int n)
 {
 	int count = 0;

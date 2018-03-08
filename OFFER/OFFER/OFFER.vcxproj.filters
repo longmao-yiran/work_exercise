@@ -105,6 +105,18 @@
     <ClCompile Include="offer_20.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="offer_21.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offer_22.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offer_23.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offer_24.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="offer_1.h">
@@ -189,6 +201,18 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="offer_20.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offer_21.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offer_22.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offer_23.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offer_24.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
