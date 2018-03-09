@@ -11,25 +11,40 @@ ListNode* ReverseList(ListNode* pHead)
 	if (pHead == nullptr)
 		return nullptr;
 
-	ListNode* pNodeFront = pHead;
-	ListNode* pNode = pHead->m_pNext;
-	ListNode* pNodeLater = nullptr;
 	
-	if (pNode != nullptr)
-		pNodeLater = pNode->m_pNext;
-	else
-		return pHead;
+	
+	// 自己的解法
+	//ListNode* pNodeFront = pHead;
+	//ListNode* pNode = pHead->m_pNext;
+	//ListNode* pNodeLater = nullptr;
+	//if (pNode != nullptr)
+	//	pNodeLater = pNode->m_pNext;
+	//else
+	//	return pHead;
 
-	pNodeFront->m_pNext = nullptr;
-	while (pNodeLater != nullptr){
+	//pNodeFront->m_pNext = nullptr;
+	//while (pNodeLater != nullptr){
+	//	pNode->m_pNext = pNodeFront;
+	//	pNodeFront = pNode;
+	//	pNode = pNodeLater;
+	//	pNodeLater = pNodeLater->m_pNext;
+	//}
+	//pNode->m_pNext = pNodeFront;
+	//pHead = pNode;
+
+	// 书中解法 代码更简洁 主要是初始化方式不一样
+	ListNode* pNodeFront = nullptr;			// 注意：此处为null 方便第一个节点的next为null
+	ListNode* pNode = pHead;
+	ListNode* pNodeLater = nullptr;
+	while (pNode != nullptr) {
+		pNodeLater = pNode->m_pNext;
+		if (pNodeLater == nullptr)
+			pHead = pNode;
+
 		pNode->m_pNext = pNodeFront;
 		pNodeFront = pNode;
 		pNode = pNodeLater;
-		pNodeLater = pNodeLater->m_pNext;
 	}
-	pNode->m_pNext = pNodeFront;
-	pHead = pNode;
-
 	return pHead;
 }
 

@@ -25,13 +25,14 @@
 #include "offer_22.h"
 #include "offer_23.h"
 #include "offer_24.h"
+#include "offer_25.h"
+#include "offer_26.h"
 
 using namespace std;
 
 int main()
 {
 	//offer_uk_test();
-
 
 	//offer_1_test();				// 赋值运算符
 	//offer_2_test();				// 实现一个单例模式   
@@ -58,7 +59,9 @@ int main()
 	//offer_21_test();				// 调整数组顺序使奇数位于偶数前面
 	//offer_22_test();				// 链表中倒数第k个结点
 	//offer_23_test();				// 链表中环的入口结点
-	offer_24_test();				// 反转链表
+	//offer_24_test();				// 反转链表
+	//offer_25_test();				// 合并两个排序的链表
+	offer_26_test();
 	getchar();
 	return 0;
 }
