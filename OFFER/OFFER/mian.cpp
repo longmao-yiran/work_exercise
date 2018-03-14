@@ -27,6 +27,16 @@
 #include "offer_24.h"
 #include "offer_25.h"
 #include "offer_26.h"
+#include "offer_27.h"
+#include "offer_28.h"
+#include "offer_29.h"
+#include "offer_30.h"
+#include "offer_31.h"
+#include "offer_32_1.h"
+#include "offer_32_2.h"
+#include "offer_32_3.h"
+#include "offer_33.h"
+#include "offer_34.h"
 
 using namespace std;
 
@@ -61,7 +71,17 @@ int main()
 	//offer_23_test();				// 链表中环的入口结点
 	//offer_24_test();				// 反转链表
 	//offer_25_test();				// 合并两个排序的链表
-	offer_26_test();
+	//offer_26_test();				// 树的子结构
+	//offer_27_test();				// 二叉树的镜像
+	//offer_28_test();				// 对称的二叉树
+	//offer_29_test();				// 顺时针打印矩阵
+	//offer_30_test();				// 包含min函数的栈
+	//offer_31_test();				// 栈的压入、弹出序列
+	//offer_32_1_test();			// 从上往下打印二叉树
+	//offer_32_2_test();			// 把二叉树打印成多行
+	//offer_32_3_test();			// 按之字形顺序打印二叉树
+	//offer_33_test();				// 二叉搜索树的后序遍历序列
+	offer_34_test();				// 二叉树中和为某一值的路径
 	getchar();
 	return 0;
 }

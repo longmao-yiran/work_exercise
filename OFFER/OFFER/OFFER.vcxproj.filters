@@ -123,6 +123,36 @@
     <ClCompile Include="offer_26.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="offer_27.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offer_28.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offer_29.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offer_30.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offer_33.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offer_32_1.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offer_31.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offer_32_2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offer_32_3.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offer_34.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="offer_1.h">
@@ -225,6 +255,36 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="offer_26.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offer_27.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offer_28.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offer_29.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offer_30.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offer_33.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offer_32_1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offer_31.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offer_32_2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offer_32_3.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offer_34.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
