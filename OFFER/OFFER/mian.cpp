@@ -37,6 +37,11 @@
 #include "offer_32_3.h"
 #include "offer_33.h"
 #include "offer_34.h"
+#include "offer_35.h"
+#include "offer_36.h"
+#include "offer_37.h"
+#include "offer_38.h"
+#include "offer_38_1.h"
 
 using namespace std;
 
@@ -81,7 +86,13 @@ int main()
 	//offer_32_2_test();			// 把二叉树打印成多行
 	//offer_32_3_test();			// 按之字形顺序打印二叉树
 	//offer_33_test();				// 二叉搜索树的后序遍历序列
-	offer_34_test();				// 二叉树中和为某一值的路径
+	//offer_34_test();				// 二叉树中和为某一值的路径
+	//offer_35_test();				// 复杂链表的复制
+	//offer_36_test();				// 二叉搜索树与双向链表
+	//offer_37_test();				// 序列化二叉树
+	//offer_38_test();				// 字符串的排列
+	//offer_38_1_test();			// 字符串组合数
+
 	getchar();
 	return 0;
 }
