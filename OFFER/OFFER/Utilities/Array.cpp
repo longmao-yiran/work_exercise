@@ -54,3 +54,24 @@ int Partition(int data[], int length, int start, int end)
 
     return small;
 }
+
+int Partition_longmao(int data[], int length, int start, int end)
+{
+	if (data == nullptr || length <= 0 || start < 0 || end >= length)
+		throw new std::exception("Invalid Parameters");
+
+	int index = RandomInRange(start, end);
+	int number = data[end];
+	int l = start, r = end;
+	while (l<r)
+	{
+		while (data[l] <= data[index])
+			++l;
+		data[r] = data[l];
+		while (data[r] >= data[index])
+			--r;
+		data[l] = data[r];
+	}
+	data[l] = number;
+
+}

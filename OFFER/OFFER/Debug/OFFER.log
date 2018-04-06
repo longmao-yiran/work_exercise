@@ -1,4 +1,4 @@
-﻿  offer_38_1.cpp
-c:\users\longmao\desktop\work_exercise\offer\offer\offer_38_1.cpp(15): warning C4018: “<”: 有符号/无符号不匹配
-  OFFER.vcxproj -> C:\Users\longmao\Desktop\work_exercise\OFFER\Debug\OFFER.exe
-  OFFER.vcxproj -> C:\Users\longmao\Desktop\work_exercise\OFFER\Debug\OFFER.pdb (Partial PDB)
+﻿  offer_39.cpp
+    正在创建库 C:\Users\longmao\Desktop\work_exercise\OFFER\Debug\OFFER.lib 和对象 C:\Users\longmao\Desktop\work_exercise\OFFER\Debug\OFFER.exp
+mian.obj : error LNK2019: 无法解析的外部符号 "void __cdecl offer_39_test(void)" (?offer_39_test@@YAXXZ)，该符号在函数 _main 中被引用
+C:\Users\longmao\Desktop\work_exercise\OFFER\Debug\OFFER.exe : fatal error LNK1120: 1 个无法解析的外部命令

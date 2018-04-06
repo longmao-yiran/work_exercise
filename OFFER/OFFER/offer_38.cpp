@@ -23,6 +23,7 @@ void Permutation(char* pStr, char* pBegin)
 		cout << pStr << endl;
 	}
 	else {
+		// 思路：列举所有可能出现第一个位置的情况，然后固定第一位，列举出现的第二个位置的情况 递归
 		for (char* ch = pBegin;*ch != '\0';ch++) {
 			// 注意：剑指offer没有考虑重复的情况 此处修复
 			if (*pBegin == *ch && pBegin != ch)
@@ -32,7 +33,7 @@ void Permutation(char* pStr, char* pBegin)
 			*pBegin = temp;
 
 			Permutation(pStr, pBegin+1);
-
+			// 注意：此处要记得换回来
 			temp = *ch;
 			*ch = *pBegin;
 			*pBegin = temp;

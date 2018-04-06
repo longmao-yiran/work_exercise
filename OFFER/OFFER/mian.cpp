@@ -42,6 +42,8 @@
 #include "offer_37.h"
 #include "offer_38.h"
 #include "offer_38_1.h"
+#include "offer_38_2.h"
+#include "offer_39.h"
 
 using namespace std;
 
@@ -92,6 +94,8 @@ int main()
 	//offer_37_test();				// 序列化二叉树
 	//offer_38_test();				// 字符串的排列
 	//offer_38_1_test();			// 字符串组合数
+	//offer_38_2_test();			// 八皇后
+	offer_39_test();				// 
 
 	getchar();
 	return 0;

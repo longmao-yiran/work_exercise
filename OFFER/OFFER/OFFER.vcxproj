@@ -147,6 +147,8 @@
     <ClCompile Include="offer_37.cpp" />
     <ClCompile Include="offer_38.cpp" />
     <ClCompile Include="offer_38_1.cpp" />
+    <ClCompile Include="offer_38_2.cpp" />
+    <ClCompile Include="offer_39.cpp" />
     <ClCompile Include="offer_3_1.cpp" />
     <ClCompile Include="offer_3_2.cpp" />
     <ClCompile Include="offer_4.cpp" />
@@ -198,6 +200,8 @@
     <ClInclude Include="offer_37.h" />
     <ClInclude Include="offer_38.h" />
     <ClInclude Include="offer_38_1.h" />
+    <ClInclude Include="offer_38_2.h" />
+    <ClInclude Include="offer_39.h" />
     <ClInclude Include="offer_3_1.h" />
     <ClInclude Include="offer_3_2.h" />
     <ClInclude Include="offer_4.h" />

@@ -168,6 +168,12 @@
     <ClCompile Include="offer_38_1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="offer_38_2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="offer_39.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="offer_1.h">
@@ -315,6 +321,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="offer_38_1.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offer_38_2.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="offer_39.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
