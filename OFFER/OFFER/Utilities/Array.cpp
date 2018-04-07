@@ -60,18 +60,20 @@ int Partition_longmao(int data[], int length, int start, int end)
 	if (data == nullptr || length <= 0 || start < 0 || end >= length)
 		throw new std::exception("Invalid Parameters");
 
-	int index = RandomInRange(start, end);
-	int number = data[end];
+	int index = RandomInRange(start, end);		// 选取哨兵
+	Swap(&data[index], &data[end]);
+
+	int number = data[end];						// 记录哨兵的值
 	int l = start, r = end;
 	while (l<r)
 	{
-		while (data[l] <= data[index])
+		while (data[l] <= number && l<r)		// 注意此处要加 l<r
 			++l;
 		data[r] = data[l];
-		while (data[r] >= data[index])
+		while (data[r] >= number && l<r)
 			--r;
 		data[l] = data[r];
 	}
 	data[l] = number;
-
+	return l;
 }

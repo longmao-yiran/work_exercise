@@ -44,6 +44,9 @@
 #include "offer_38_1.h"
 #include "offer_38_2.h"
 #include "offer_39.h"
+#include "offer_40.h"
+#include "offer_41.h"
+#include "offer_42.h"
 
 using namespace std;
 
@@ -95,7 +98,10 @@ int main()
 	//offer_38_test();				// 字符串的排列
 	//offer_38_1_test();			// 字符串组合数
 	//offer_38_2_test();			// 八皇后
-	offer_39_test();				// 
+	//offer_39_test();				// 数组中出现次数超过一半的数字
+	//offer_40_test();				// 最小的K个数
+	//offer_41_test();				// 数据流中的中位数
+	offer_42_test();				// 连续子数组的最大和
 
 	getchar();
 	return 0;
