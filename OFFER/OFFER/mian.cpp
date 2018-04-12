@@ -47,6 +47,10 @@
 #include "offer_40.h"
 #include "offer_41.h"
 #include "offer_42.h"
+#include "offer_43.h"
+#include "offer_44.h"
+#include "offer_45.h"
+#include "offer_46.h"
 
 using namespace std;
 
@@ -101,7 +105,11 @@ int main()
 	//offer_39_test();				// 数组中出现次数超过一半的数字
 	//offer_40_test();				// 最小的K个数
 	//offer_41_test();				// 数据流中的中位数
-	offer_42_test();				// 连续子数组的最大和
+	//offer_42_test();				// 连续子数组的最大和
+	//offer_43_test();				// 整数中1出现的次数（从1到n整数中1出现的次数）
+	//offer_44_test();				// 序列中某一位的数字
+	//offer_45_test();				// 把数组排成最小的数
+	offer_46_test();				// 数字翻译成字符串
 
 	getchar();
 	return 0;

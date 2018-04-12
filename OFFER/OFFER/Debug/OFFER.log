@@ -1,13 +1,3 @@
-﻿  offer_42.cpp
-  offer_41.cpp
-  offer_40.cpp
-c:\users\longmao\desktop\work_exercise\offer\offer\offer_40.cpp(11): warning C4554: “|”: 检查运算符优先级可能存在的错误；使用圆括号阐明优先级
-c:\users\longmao\desktop\work_exercise\offer\offer\offer_40.cpp(34): warning C4018: “<”: 有符号/无符号不匹配
-c:\users\longmao\desktop\work_exercise\offer\offer\offer_40.cpp(39): warning C4018: “<”: 有符号/无符号不匹配
-c:\users\longmao\desktop\work_exercise\offer\offer\offer_40.cpp(64): warning C4018: “<”: 有符号/无符号不匹配
-c:\users\longmao\desktop\work_exercise\offer\offer\offer_40.cpp(70): warning C4018: “<”: 有符号/无符号不匹配
-  mian.cpp
-  正在生成代码...
-    正在创建库 C:\Users\longmao\Desktop\work_exercise\OFFER\Debug\OFFER.lib 和对象 C:\Users\longmao\Desktop\work_exercise\OFFER\Debug\OFFER.exp
+﻿  offer_46.cpp
   OFFER.vcxproj -> C:\Users\longmao\Desktop\work_exercise\OFFER\Debug\OFFER.exe
   OFFER.vcxproj -> C:\Users\longmao\Desktop\work_exercise\OFFER\Debug\OFFER.pdb (Partial PDB)
